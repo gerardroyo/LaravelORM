@@ -9,6 +9,6 @@ $factory->define(Coche::class, function (Faker $faker) {
     return [
         'make' =>$faker->name,
         'model' =>$faker->paragraph,
-        'produced_on' =>$faker->state,
+        'produced_on' =>$faker->date,
     ];
 });

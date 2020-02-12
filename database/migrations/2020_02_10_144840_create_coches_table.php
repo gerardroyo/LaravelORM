@@ -17,7 +17,7 @@ class CreateCochesTable extends Migration
             $table->increments('id');
             $table->string('make');
             $table->string('model');
-            $table->date('produced_on');
+            $table->string('produced_on');
             $table->timestamps();
           });
     }
