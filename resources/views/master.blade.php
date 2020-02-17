@@ -15,16 +15,19 @@
     <title>APP - @yield('pageTitle')</title>
   </head>
   <body>
-    <div class="container">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/coche">Coches</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/coche/create">Crear</a>
+        </li>
+      </ul>
+    </nav>
+    @yield('content')
 
-      @yield('header')
-      <div class="container">
-        @yield('content')
-      </div>
-
-      <div class="container">
-        @yield('footer')
-      </div>
+    @yield('footer')
 
     </div>
 

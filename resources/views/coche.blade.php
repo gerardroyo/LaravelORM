@@ -1,9 +1,5 @@
 @extends('master')
 @section('pageTitle', 'Pàgina Index')
-
-@section('header')
-
-@endsection
   
 @section('content')
 <div class="content">
