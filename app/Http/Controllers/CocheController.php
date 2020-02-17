@@ -14,7 +14,10 @@ class CocheController extends Controller
      */
     public function index()
     {
-        //
+
+        $coches = Coche::all();
+
+        return view('all')->with('coches', $coches);
     }
 
     /**
@@ -24,7 +27,7 @@ class CocheController extends Controller
      */
     public function create()
     {
-        //
+        return view('create');
     }
 
     /**
@@ -35,7 +38,8 @@ class CocheController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Coche::create($request->all());
+        return redirect('coche');
     }
 
     /**
@@ -58,7 +62,8 @@ class CocheController extends Controller
      */
     public function edit($id)
     {
-        //
+        $coche = Coche::find($id);
+        return view('edit')->with('coche', $coche);
     }
 
     /**
@@ -70,7 +75,9 @@ class CocheController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $coche = Coche::find($id);
+        $coche->update($request->all());
+        return redirect('coche');
     }
 
     /**
@@ -81,6 +88,8 @@ class CocheController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $coche = Coche::find($id);
+        $coche->delete();
+        return redirect('coche');
     }
 }

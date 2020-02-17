@@ -1,3 +1,11 @@
+@extends('master')
+@section('pageTitle', 'Pàgina Index')
+
+@section('header')
+
+@endsection
+  
+@section('content')
 <div class="content">
     <div class="title m-b-mb">
         <h1>Coche {{ $coche->id }}</h1>
@@ -8,3 +16,8 @@
         <li>Produced on: {{ $coche->produced_on }}</li>
     </ul>
 </div> 
+@endsection
+
+@section('footer')
+
+@endsection
